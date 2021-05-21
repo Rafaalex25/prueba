@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title class="text-center">Buscador</title>
+        
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     
+     
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.jumbotron {
+ 
+ padding: 2rem 1rem;
+
+ margin-bottom: 2rem;
+
+ background-color: #201e1e;
+ color: #FFFFFF;
+ text-align: center;
+
+ border-radius: 0.3rem;
+
+
+
+   background: #201e1e; 
+
+   background: -moz-linear-gradient(top, #201e1e 0%, #201e1e 14%, #201e1e 100%); /* FF3.6-15 */
+
+   background: -webkit-linear-gradient(top, #201e1e 0%,#201e1e 14%,#201e1e 100%); /* Chrome10-25,Safari5.1-6 */
+
+   background: linear-gradient(to bottom, #201e1e 0%,#201e1e 14%,#201e1e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201e1e', endColorstr='#201e1e',GradientType=0 ); /* IE6-9 */ 
+
+}
+
+.hd1{
+
+   color:#fff;
+
+}
+.button {
+    border-radius: 4px;
+    background-color: #201e1e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+    </head>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Bienvenidos</h1>
+            
+          </div>
+   <body class="container">
+        
+      <form action = "http://localhost:5000/opciones" method = "POST">
+      
+        <div class="form-group">
+                
+            <label for="input">Ingresa el estado (ejemplo: Aguascalientes)</label>
+            <textarea class="form-control" id="estado" name="estado" rows ="0.5">{{estado}}</textarea>
+
+            <label for="input">Ingresa el municipio (ejemplo:Aguascalientes)</label>
+            <textarea class="form-control" id="municipio" name="municipio" rows ="0.5">{{municipio}}</textarea>
+
+            <label for="input">Ingresa el colonia (ejemplo: Morelos)</label>
+            <textarea class="form-control" id="colonia" name="colonia" rows ="0.5">{{colonia}}</textarea>
+        </div>
+
+
+   
+              
+            
+
+        <p><button class="button"><span>continuar</span></button></p>
+      </form>
+
+      
+      
+   </body>
+</html>
